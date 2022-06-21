@@ -1,6 +1,3 @@
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using Domain;
 using MediatR;
 using Persistence;
@@ -30,7 +27,6 @@ namespace Application.BowlingGames
                 var bowlinggame = new BowlingGame
                 {
                     Id = request.Id,
-                    PlayerName = request.PlayerName,
                     Score = request.Score,
                     Frames = request.Frames,
                 };
