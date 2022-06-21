@@ -11,8 +11,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220620204732_AddedColumnThirdRoll")]
-    partial class AddedColumnThirdRoll
+    [Migration("20220621173202_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,10 +25,6 @@ namespace Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("PlayerName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("Score")
                         .HasColumnType("INTEGER");
 
@@ -39,14 +35,16 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Frame", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<Guid?>("BowlingGameId")
+                    b.Property<Guid>("BowlingGameId")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("FirstRoll")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("FrameNumber")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("SecondRoll")
@@ -55,21 +53,53 @@ namespace Persistence.Migrations
                     b.Property<int?>("ThirdRoll")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("UserId", "BowlingGameId");
 
                     b.HasIndex("BowlingGameId");
 
-                    b.ToTable("Frame");
+                    b.ToTable("Frames");
+                });
+
+            modelBuilder.Entity("Domain.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Domain.Frame", b =>
                 {
-                    b.HasOne("Domain.BowlingGame", null)
+                    b.HasOne("Domain.BowlingGame", "BowlingGame")
                         .WithMany("Frames")
-                        .HasForeignKey("BowlingGameId");
+                        .HasForeignKey("BowlingGameId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.User", "User")
+                        .WithMany("Frames")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BowlingGame");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.BowlingGame", b =>
+                {
+                    b.Navigation("Frames");
+                });
+
+            modelBuilder.Entity("Domain.User", b =>
                 {
                     b.Navigation("Frames");
                 });
