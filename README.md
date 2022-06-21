@@ -1,7 +1,7 @@
 # LoBowling
 ### It's not how you bowl; it's how you roll 🎳
 
-This bowling application is created using a .Net 6 + C# backend and an Angular frontend.
+This bowling application is created using a .Net 6 + C# backend and an Angular 14 frontend.
 I am trying to stay on the light side of the force, so I have tried to obey the rules of *clean architecture*. 
 Here's a quick diagram of that: 
 <img src="https://miro.medium.com/max/1400/1*fhgWH-zMWac5i7zSiMFaOg.png" alt="drawing" width="600"/>
