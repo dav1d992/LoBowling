@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -8,10 +8,22 @@ import { HomeComponent } from './home/home.component';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, HomeComponent, ScoreboardComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(appRoutes)],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    HomeComponent,
+    ScoreboardComponent,
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    MatTableModule,
+    RouterModule.forRoot(appRoutes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
