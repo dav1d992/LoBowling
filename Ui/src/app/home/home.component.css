@@ -6,7 +6,7 @@ body {
     margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 80%;
     height: max-content;
     padding: 2em;
 }
@@ -17,4 +17,32 @@ body {
 
 .prehead {
     color: whitesmoke
+}
+
+#bowling-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#bowling-table td, #bowling-table th {
+    border: 1px solid whitesmoke;
+    padding: 8px;
+}
+
+#bowling-table tr:nth-child(odd){background-color: #772953c2;}
+#bowling-table tr:nth-child(even){background-color: #85311393;}
+
+
+#bowling-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #57193A;
+    color: whitesmoke;
+}
+
+#bowling-table tr {
+    font-weight: bold;
+    color: whitesmoke;
 }
