@@ -1,4 +1,12 @@
 export interface Frame {
-  id: number;
-  displayName: string;
+  userId: number;
+  bowlingGameId: number;
+  frameNumber: number;
+  firstRoll: number;
+  secondRoll: number;
+  thirdRoll: number;
+  isStrike: boolean;
+  isSpare: boolean;
+  score: number;
+  bonusPoints: number;
 }

@@ -13,10 +13,10 @@ Lives in the center of our application universe and has no dependencies on anyth
 #### Application
 This layer contains all business logic in our application. 
 
-#### Api
+**Api:**
 This guy is responsible for receiving and responding to http requests. This is where the controllers live. 
 
-#### Persistence
+**Persistence:** 
 Responsible for providing database access and the queries that is needed to gain access to the database. 
 
 

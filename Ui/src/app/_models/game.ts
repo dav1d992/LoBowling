@@ -1,4 +1,6 @@
+import { Frame } from './frame';
+
 export interface Game {
-  id: string;
-  score: number;
+  id: number;
+  frames: Frame[];
 }

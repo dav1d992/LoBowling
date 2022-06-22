@@ -1,7 +1,6 @@
 ﻿namespace Domain;
 public class BowlingGame
 {
-    public Guid Id { get; set; }
-    public int Score { get; set; }
+    public int Id { get; set; }
     public ICollection<Frame> Frames { get; set; }
 }

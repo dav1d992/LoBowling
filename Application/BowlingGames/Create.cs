@@ -8,7 +8,7 @@ namespace Application.BowlingGames
     {
         public class Command : IRequest
         {
-            public Guid Id { get; set; }
+            public int Id { get; set; }
             public string PlayerName { get; set; }
             public int Score { get; set; }
             public Frame[] Frames { get; set; }
@@ -27,7 +27,6 @@ namespace Application.BowlingGames
                 var bowlinggame = new BowlingGame
                 {
                     Id = request.Id,
-                    Score = request.Score,
                     Frames = request.Frames,
                 };
 

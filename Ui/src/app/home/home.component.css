@@ -20,9 +20,11 @@ body {
 }
 
 #bowling-table {
+    margin-top: 2em;
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    overflow: hidden;
 }
 
 #bowling-table td, #bowling-table th {
@@ -30,7 +32,7 @@ body {
     padding: 8px;
 }
 
-#bowling-table tr:nth-child(odd){background-color: #772953c2;}
+#bowling-table tr:nth-child(odd){background-color: #914c4cc2;}
 #bowling-table tr:nth-child(even){background-color: #85311393;}
 
 
