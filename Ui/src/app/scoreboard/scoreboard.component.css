@@ -1,0 +1,124 @@
+html,
+body {
+    overflow: hidden;
+    color: cadetblue;
+}
+
+.page {
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50rem;
+    height: max-content;
+    padding: 2em;
+}
+
+.page--home .hero {
+    text-align: center;
+    display: flex;
+}
+
+.prehead {
+    margin-top: 2rem;
+    color: whitesmoke
+}
+
+.heading1 {
+    color: whitesmoke
+}
+
+.start-page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#bowling-table {
+    margin-top: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 46rem;
+    overflow: hidden;
+}
+
+#bowling-table td,
+#bowling-table th {
+    border: 1px solid whitesmoke;
+    padding: 8px;
+}
+
+#bowling-table tr:nth-child(odd) {
+    background-color: #57193abe;
+}
+
+#bowling-table tr:nth-child(even) {
+    background-color: #833c22c5;
+}
+
+#bowling-table tr:nth-last-child(even) {
+    background-color: #772953;
+}
+
+
+#bowling-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #57193A;
+    color: whitesmoke;
+}
+
+#bowling-table tr {
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.mat-column-frame {
+    width: 1rem;
+    text-align: center;
+    background-color: #57193A;
+
+}
+
+.mat-column-first-roll {
+    width: 1rem;
+    text-align: center;
+}
+
+.mat-column-second-roll {
+    width: 1rem;
+    text-align: center;
+}
+
+.mat-column-third-roll {
+    width: 1rem;
+    text-align: center;
+}
+
+.mat-column-strike {
+    width: 1rem;
+    text-align: center;
+}
+
+.mat-column-spare {
+    width: 1rem;
+    text-align: center;
+}
+
+.mat-column-score {
+    width: 1rem;
+    text-align: center;
+}
+
+
+.loader-container {
+    position: fixed !important;
+    width: auto;
+    height: auto;
+    color: black;
+    background: white;
+    opacity: 0.8;
+    z-index: 111 !important;
+}
