@@ -28,6 +28,11 @@ namespace Persistence
                     {
                         Id = 3,
                         DisplayName = "Kenneth",
+                    },
+                    new User
+                    {
+                        Id = 4,
+                        DisplayName = "Phil",
                     }
                 };
 
@@ -87,16 +92,16 @@ namespace Persistence
                     new BowlingGame
                     {
                         Frames = new List<Frame>{
-                            new Frame{UserId=1, FrameNumber = 1, FirstRoll = 10, SecondRoll=0},
-                            new Frame{UserId=1, FrameNumber = 2, FirstRoll = 10, SecondRoll=0},
-                            new Frame{UserId=1, FrameNumber = 3, FirstRoll = 10, SecondRoll=0},
-                            new Frame{UserId=1, FrameNumber = 4, FirstRoll = 10, SecondRoll=0},
-                            new Frame{UserId=1, FrameNumber = 5, FirstRoll = 10, SecondRoll=0},
-                            new Frame{UserId=1, FrameNumber = 6, FirstRoll = 10, SecondRoll=0},
-                            new Frame{UserId=1, FrameNumber = 7, FirstRoll = 10, SecondRoll=0},
-                            new Frame{UserId=1, FrameNumber = 8, FirstRoll = 10, SecondRoll=0},
-                            new Frame{UserId=1, FrameNumber = 9, FirstRoll = 10, SecondRoll=0},
-                            new Frame{UserId=1, FrameNumber = 10, FirstRoll = 10, SecondRoll=10, ThirdRoll=10},
+                            new Frame{UserId=4, FrameNumber = 1, FirstRoll = 10, SecondRoll=0},
+                            new Frame{UserId=4, FrameNumber = 2, FirstRoll = 10, SecondRoll=0},
+                            new Frame{UserId=4, FrameNumber = 3, FirstRoll = 10, SecondRoll=0},
+                            new Frame{UserId=4, FrameNumber = 4, FirstRoll = 10, SecondRoll=0},
+                            new Frame{UserId=4, FrameNumber = 5, FirstRoll = 10, SecondRoll=0},
+                            new Frame{UserId=4, FrameNumber = 6, FirstRoll = 10, SecondRoll=0},
+                            new Frame{UserId=4, FrameNumber = 7, FirstRoll = 10, SecondRoll=0},
+                            new Frame{UserId=4, FrameNumber = 8, FirstRoll = 10, SecondRoll=0},
+                            new Frame{UserId=4, FrameNumber = 9, FirstRoll = 10, SecondRoll=0},
+                            new Frame{UserId=4, FrameNumber = 10, FirstRoll = 10, SecondRoll=10, ThirdRoll=10},
                         },
                     },
                 };
