@@ -24,13 +24,13 @@ namespace Application.BowlingGames
 
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
-                var bowlinggame = new BowlingGame
+                var bowlingGame = new BowlingGame
                 {
                     Id = request.Id,
                     Frames = request.Frames,
                 };
 
-                _context.BowlingGames.Add(bowlinggame);
+                _context.BowlingGames.Add(bowlingGame);
                 var success = await _context.SaveChangesAsync() > 0;
 
                 if (success) return Unit.Value;
